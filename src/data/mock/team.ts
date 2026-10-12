@@ -1,7 +1,7 @@
 import type { FacultyMember, TeamMember, AcademicYear } from "@/types";
 
-export const DEFAULT_FACULTY_IMG = "https://cdn.corenexis.com/f/tERiPftxg7h.png";
-export const DEFAULT_GROUP_BANNER = "https://cdn.corenexis.com/f/uRwKzIu0N7n.png";
+export const DEFAULT_FACULTY_IMG = "/images/team/faculty.png";
+export const DEFAULT_GROUP_BANNER = "/images/home/hero.jpg";
 
 export const mockFacultyAdvisors: FacultyMember[] = [
   {
@@ -10,7 +10,7 @@ export const mockFacultyAdvisors: FacultyMember[] = [
     role: "Head of Division & Faculty Advisor",
     designation: "Professor & Head of Division",
     department: "Division of Mechanical Engineering, SOE CUSAT",
-    img: DEFAULT_FACULTY_IMG,
+    img: "/images/team/faculty.png",
     qualification: "Ph.D., M.Tech",
   },
 ];
@@ -22,7 +22,7 @@ export const mockCoreOfficers2026: TeamMember[] = [
     name: "JAANAKY RENGITH",
     tier: "core",
     academicYear: "2026-27",
-    img: "https://cdn.corenexis.com/f/iLLZmB21xPv.png",
+    img: "/images/team/president.jpg",
     order: 1,
   },
   {
@@ -31,7 +31,7 @@ export const mockCoreOfficers2026: TeamMember[] = [
     name: "KALIDASAN V R",
     tier: "core",
     academicYear: "2026-27",
-    img: "https://cdn.corenexis.com/f/3pxBon39P0D.png",
+    img: "/images/team/secretary.jpg",
     order: 2,
   },
   {
@@ -40,7 +40,7 @@ export const mockCoreOfficers2026: TeamMember[] = [
     name: "SREEHARI",
     tier: "core",
     academicYear: "2026-27",
-    img: "https://res.cloudinary.com/dtz0urit6/image/upload/q_auto:best,f_jpg/cloudinary-tools-uploads/pubawxwfrgvldsdth3ql",
+    img: "/images/team/sreehari.jpg",
     order: 3,
   },
   {
@@ -49,7 +49,7 @@ export const mockCoreOfficers2026: TeamMember[] = [
     name: "RAZEEN",
     tier: "core",
     academicYear: "2026-27",
-    img: "https://cdn.corenexis.com/f/HEx7YGoIwOC.png",
+    img: "/images/team/Razeen.jpg",
     order: 4,
   },
   {
@@ -58,7 +58,7 @@ export const mockCoreOfficers2026: TeamMember[] = [
     name: "MIDLAJ",
     tier: "core",
     academicYear: "2026-27",
-    img: "https://res.cloudinary.com/dtz0urit6/image/upload/q_auto:best,f_jpg/cloudinary-tools-uploads/euqywwd8rdu81cns5axi",
+    img: "/images/team/Midlaj.jpg",
     order: 5,
   },
   {
@@ -67,7 +67,7 @@ export const mockCoreOfficers2026: TeamMember[] = [
     name: "NAVEEN",
     tier: "core",
     academicYear: "2026-27",
-    img: "https://res.cloudinary.com/dtz0urit6/image/upload/q_auto:best,f_jpg/cloudinary-tools-uploads/oqlnbm6vyruh2hikbh5h",
+    img: "/images/team/Naveen.jpg",
     order: 6,
   },
   {
@@ -76,7 +76,7 @@ export const mockCoreOfficers2026: TeamMember[] = [
     name: "ABHIRAM",
     tier: "core",
     academicYear: "2026-27",
-    img: "https://cdn.corenexis.com/f/5kwGA4XTD5Z.png",
+    img: "/images/team/ABHIRAM.jpg",
     order: 7,
   },
 ];
@@ -85,10 +85,10 @@ export const mockDepartmentHeads2026: TeamMember[] = [
   {
     id: "lead-anna",
     role: "HEAD EVENT & MARKETING",
-    name: "ANNA",
+    name: "ANNA JOSE",
     tier: "lead",
     academicYear: "2026-27",
-    img: "https://cdn.corenexis.com/f/MbIgyGEYPRG.png",
+    img: "/images/team/Anna.jpg",
     order: 8,
   },
   {
@@ -97,7 +97,7 @@ export const mockDepartmentHeads2026: TeamMember[] = [
     name: "GOKUL KRISHNA",
     tier: "lead",
     academicYear: "2026-27",
-    img: "https://cdn.corenexis.com/f/24R9UBzsdSI.png",
+    img: "/images/team/Gokul.jpg",
     order: 9,
   },
   {
@@ -106,25 +106,25 @@ export const mockDepartmentHeads2026: TeamMember[] = [
     name: "JINTA",
     tier: "lead",
     academicYear: "2026-27",
-    img: "https://cdn.corenexis.com/f/MCtxsXJkhX5.png",
+    img: "/images/team/jinta.jpg",
     order: 10,
   },
   {
     id: "lead-annson",
     role: "HEAD PR & ALUMNI",
-    name: "ANNSON",
+    name: "ANNSON D DINESH",
     tier: "lead",
     academicYear: "2026-27",
-    img: "https://cdn.corenexis.com/f/syXrYXWiHVS.png",
+    img: "/images/team/Annson.jpg",
     order: 11,
   },
   {
     id: "lead-mithil",
     role: "HEAD EDITORIAL",
-    name: "MITHIL",
+    name: "K L MITHIL",
     tier: "lead",
     academicYear: "2026-27",
-    img: "https://res.cloudinary.com/dtz0urit6/image/upload/q_auto:best,f_jpg/cloudinary-tools-uploads/vj2kdmvy9fo7icdhvnum",
+    img: "/images/team/MITHIL.jpg",
     order: 12,
   },
   {
@@ -133,34 +133,34 @@ export const mockDepartmentHeads2026: TeamMember[] = [
     name: "SHAMIL",
     tier: "lead",
     academicYear: "2026-27",
-    img: "https://res.cloudinary.com/dtz0urit6/image/upload/q_auto:best,f_jpg/cloudinary-tools-uploads/ux80ocgwkykcxmxkprip",
+    img: "/images/team/Shamil.jpg",
     order: 13,
   },
   {
     id: "lead-ashish",
     role: "HEAD TECHNICAL",
-    name: "ASHISH",
+    name: "ASHISH PANSHOTRA",
     tier: "lead",
     academicYear: "2026-27",
-    img: "https://cdn.corenexis.com/f/fJsHc3153Uh.png",
+    img: "/images/team/ashish.jpg",
     order: 14,
   },
   {
     id: "lead-aibel",
     role: "HEAD TECHNICAL",
-    name: "AIBEL",
+    name: "AIBEL JOY",
     tier: "lead",
     academicYear: "2026-27",
-    img: "https://res.cloudinary.com/dtz0urit6/image/upload/q_auto:best,f_jpg/cloudinary-tools-uploads/w4rghuqlc9hxdr5yf9lp",
+    img: "/images/team/Aibel.jpg",
     order: 15,
   },
   {
     id: "lead-hariraj",
     role: "HEAD ACADEMICS",
-    name: "HARIRAJ",
+    name: "HARIRAJ P",
     tier: "lead",
     academicYear: "2026-27",
-    img: "https://res.cloudinary.com/dtz0urit6/image/upload/q_auto:best,f_jpg/cloudinary-tools-uploads/rb76c0l7ormwfkwxvxag",
+    img: "/images/team/Hariraj.jpg",
     order: 16,
   },
   {
@@ -169,7 +169,7 @@ export const mockDepartmentHeads2026: TeamMember[] = [
     name: "ASNA",
     tier: "lead",
     academicYear: "2026-27",
-    img: "https://cdn.corenexis.com/f/oFNWU2MIg7z.png",
+    img: "/images/team/Asna.jpg",
     order: 17,
   },
   {
@@ -178,16 +178,16 @@ export const mockDepartmentHeads2026: TeamMember[] = [
     name: "ABHINAV",
     tier: "lead",
     academicYear: "2026-27",
-    img: "https://res.cloudinary.com/dtz0urit6/image/upload/q_auto:best,f_jpg/cloudinary-tools-uploads/wwllqxnrjai3bjkqlxb3",
+    img: "/images/team/abhinav.jpg",
     order: 18,
   },
   {
     id: "lead-ashfaque",
     role: "HEAD MEDIA",
-    name: "ASHFAQUE",
+    name: "ASHFAQUE M",
     tier: "lead",
     academicYear: "2026-27",
-    img: "https://cdn.corenexis.com/f/x2g19zRIrF7.png",
+    img: "/images/team/Ashfaque.jpeg",
     order: 19,
   },
 ];

@@ -11,7 +11,7 @@ export const mockAchievements: Achievement[] = [
     rank: "SAEINDIA Section Award",
     eventOrCompetition: "SAEINDIA Foundation Awards 2023-24",
     bullets: ["Honoured with the prestigious SAEINDIA Section Award"],
-    image: "https://cdn.corenexis.com/f/FQpnl5Rp9H0.png",
+    image: "/images/achive/sae.png",
   },
   {
     id: "astron-aperta",
@@ -22,7 +22,7 @@ export const mockAchievements: Achievement[] = [
     rank: "All India Rank 9",
     eventOrCompetition: "Electric Solar Challenge 2025",
     bullets: ["All Kerala Rank 1", "All India Rank 9 in the National Championship"],
-    image: "https://cdn.corenexis.com/f/cmieAF7kxA0.png",
+    image: "/images/achive/astron.jpg",
   },
   {
     id: "yeti-racing",
@@ -38,7 +38,7 @@ export const mockAchievements: Achievement[] = [
       "1st place in Endurance, Efficiency and Overall Dynamics events",
       "All India Rank 9 in SAE SUPRA 2024",
     ],
-    image: "https://cdn.corenexis.com/f/DBn5Ds1XzwI.png",
+    image: "/images/achive/yeti.png",
   },
   {
     id: "tarusa-motorsports",
@@ -53,7 +53,7 @@ export const mockAchievements: Achievement[] = [
       "2nd place in Altair Simulation",
       "4th place in Sustainability",
     ],
-    image: "https://cdn.corenexis.com/f/o05dHa3Y2b3.png",
+    image: "/images/achive/tarusa.jpg",
   },
   {
     id: "team-aroha",
@@ -64,7 +64,7 @@ export const mockAchievements: Achievement[] = [
     rank: "International Rank 15",
     eventOrCompetition: "ISDC'25 (International Space Development Conference)",
     bullets: ["Best Overall Design", "Only team from Kerala to reach the Space Robotics Finals"],
-    image: "https://cdn.corenexis.com/f/4Q8u7b9Ahwo.png",
+    image: "/images/achive/aroha.jpg",
   },
   {
     id: "team-hermes",
@@ -75,7 +75,7 @@ export const mockAchievements: Achievement[] = [
     rank: "All India Rank 1",
     eventOrCompetition: "SAE Bicycle Design Challenge 6.0",
     bullets: ["All India Rank 1 Overall", "2nd place for Best Design"],
-    image: "https://cdn.corenexis.com/f/hEVRXvfqDt2.png",
+    image: "/images/achive/hermes.jpg",
   },
   {
     id: "team-marutsakha",
@@ -86,7 +86,7 @@ export const mockAchievements: Achievement[] = [
     rank: "All India Rank 3",
     eventOrCompetition: "SAE Drone Development Challenge 2024",
     bullets: ["All India Rank 3 Overall", "All Kerala Rank 1"],
-    image: "https://cdn.corenexis.com/f/AOEFj2i09xi.png",
+    image: "/images/achive/marutsakha.jpg",
   },
   {
     id: "multi-vegetable-transplanter",
@@ -98,7 +98,7 @@ export const mockAchievements: Achievement[] = [
     rank: "1st Place",
     eventOrCompetition: "Ignite'24 Innovation and Entrepreneurship Challenge",
     bullets: ["Won 1st Place out of 450 competing student teams"],
-    image: "https://cdn.corenexis.com/f/mVXcxH72IvN.png",
+    image: "/images/achive/ignite.jpg",
   },
   {
     id: "team-horizon",
@@ -109,6 +109,6 @@ export const mockAchievements: Achievement[] = [
     rank: "Global Rank 11",
     eventOrCompetition: "European Rover Challenge 2024, Poland",
     bullets: ["Global Rank 11 in European Rover Challenge 2024, Poland"],
-    image: "https://cdn.corenexis.com/f/eE421vzfeZI.png",
+    image: "/images/achive/horizon.jpg",
   },
 ];

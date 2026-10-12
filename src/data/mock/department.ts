@@ -27,7 +27,7 @@ export const mockDepartmentHOD: FacultyMember = {
   role: "Professor & HOD",
   department: "Division of Mechanical Engineering, School of Engineering, CUSAT",
   specialization: "Advanced Manufacturing & CNC Technology",
-  img: "https://cdn.corenexis.com/f/2H2Y2w3Pdvr.png",
+  img: "/images/mec/frank.jpg",
 };
 
 export const mockDepartmentFaculty: FacultyMember[] = [

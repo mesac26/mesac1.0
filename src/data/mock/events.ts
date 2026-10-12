@@ -1,23 +1,23 @@
 import type { Event } from "@/types";
 
 // Hosted event images
-const daikin1 = "https://cdn.corenexis.com/f/1l9pScvEDPr.png";
-const daikin2 = "https://cdn.corenexis.com/f/6Fs1InZXeEP.png";
-const induction1 = "https://cdn.corenexis.com/f/12wei0w7Bkx.png";
-const induction2 = "https://cdn.corenexis.com/f/IhmwV83ue5B.png";
-const daad1 = "https://cdn.corenexis.com/f/EyzaTaai1FJ.png";
-const cfd1 = "https://cdn.corenexis.com/f/Db56MkKtIvQ.png";
-const cfd2 = "https://cdn.corenexis.com/f/U5BLgwUoMyz.png";
-const controlValves1 = "https://cdn.corenexis.com/f/7BYo6YeCWXC.png";
-const placement1 = "https://cdn.corenexis.com/f/raGYgh7GG5E.png";
-const placement2 = "https://cdn.corenexis.com/f/8Wyvlu1HyxD.png";
-const industrialImmersion1 = "https://cdn.corenexis.com/f/mdLfW2uIf6E.png";
-const farewell1 = "https://cdn.corenexis.com/f/mZiXK1PJCdM.png";
-const farewell2 = "https://cdn.corenexis.com/f/X87CRjagS5H.png";
-const spacecraft1 = "https://cdn.corenexis.com/f/OrzMDewE2gk.png";
-const lathe1 = "https://cdn.corenexis.com/f/K1uk4eQLge5.png";
-const generator1 = "https://cdn.corenexis.com/f/IdVJLyoxVXk.png";
-const cfd2022_1 = "https://cdn.corenexis.com/f/l6hXVP7fvvY.png";
+const daikin1 = "/images/events/daikin-workshop-2025-1.jpg";
+const daikin2 = "/images/events/daikin-workshop-2025-2.jpg";
+const induction1 = "/images/events/studind-1.jpg";
+const induction2 = "/images/events/studind-2.jpg";
+const daad1 = "/images/events/daad.jpg";
+const cfd1 = "/images/events/cfd1.jpg";
+const cfd2 = "/images/events/cfd2.jpg";
+const controlValves1 = "/images/events/control.jpg";
+const placement1 = "/images/events/placement-1.jpg";
+const placement2 = "/images/events/placement-2.jpg";
+const industrialImmersion1 = "/images/events/industrial-1.jpg";
+const farewell1 = "/images/events/farewell-1.jpg";
+const farewell2 = "/images/events/farewell-2.jpg";
+const spacecraft1 = "/images/events/spaceCraft.jpg";
+const lathe1 = "/images/events/almt.jpg";
+const generator1 = "/images/events/generator.jpg";
+const cfd2022_1 = "/images/events/CFD.jpg";
 
 export const mockEvents: Event[] = [
   {

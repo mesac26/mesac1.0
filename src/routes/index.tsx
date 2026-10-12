@@ -22,7 +22,7 @@ import {
   Users,
 } from "lucide-react";
 
-const hero = "https://cdn.corenexis.com/f/3X8Antm4WLq.jpg";
+const hero = "/images/home/hero.jpg";
 
 export const Route = createFileRoute("/")({
   head: () => ({
@@ -262,7 +262,7 @@ function Index() {
             {/* GROUP PHOTO IMAGE FRAME */}
             <div className="relative mb-10 sm:mb-12 overflow-hidden rounded-2xl border border-border bg-card shadow-lg group">
               <img
-                src="https://cdn.corenexis.com/f/uRwKzIu0N7n.png"
+                src="/images/home/hero.jpg"
                 alt="MESAC Committee & Members Group Photo"
                 loading="lazy"
                 className="w-full h-auto max-h-[520px] object-cover transition-transform duration-700 group-hover:scale-[1.01]"
