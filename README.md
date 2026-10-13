@@ -191,32 +191,32 @@ The final system is intended to retrieve public content from a database rather t
 
 ## 7. Current Development Status
 
-| Feature | Current status |
-|---|---|
-| Home page | Frontend implemented |
-| Events | Frontend implemented |
-| Gallery | Frontend implemented |
-| Team and academic-year archive | Frontend implemented |
-| Achievements | Frontend implemented |
-| Placements | Frontend implemented |
-| Mechanical Department | Frontend implemented |
-| Academy and GPA/CGPA calculator | Frontend implemented |
-| Academic Archive | Frontend interface implemented |
-| About MESAC | Frontend implemented |
-| Contact | Frontend form and page implemented |
-| Privacy Notice | Frontend implemented |
-| Alumni registration | Frontend prototype implemented |
-| Database integration | Pending |
-| Admin authentication | Pending |
-| Admin dashboard and content management | Pending |
-| Persistent form submissions | Pending |
-| Email notifications | Pending |
-| Google Drive archive integration | Pending |
-| Guaranteed unique alumni usernames | Pending |
-| Activity logs and backups | Pending |
-| Production deployment and final verification | Pending |
+| Feature                                      | Current status                     |
+| -------------------------------------------- | ---------------------------------- |
+| Home page                                    | Frontend implemented               |
+| Events                                       | Frontend implemented               |
+| Gallery                                      | Frontend implemented               |
+| Team and academic-year archive               | Frontend implemented               |
+| Achievements                                 | Frontend implemented               |
+| Placements                                   | Frontend implemented               |
+| Mechanical Department                        | Frontend implemented               |
+| Academy and GPA/CGPA calculator              | Frontend implemented               |
+| Academic Archive                             | Frontend interface implemented     |
+| About MESAC                                  | Frontend implemented               |
+| Contact                                      | Frontend form and page implemented |
+| Privacy Notice                               | Frontend implemented               |
+| Alumni registration                          | Frontend prototype implemented     |
+| Database integration                         | Pending                            |
+| Admin authentication                         | Pending                            |
+| Admin dashboard and content management       | Pending                            |
+| Persistent form submissions                  | Pending                            |
+| Email notifications                          | Pending                            |
+| Google Drive archive integration             | Pending                            |
+| Guaranteed unique alumni usernames           | Pending                            |
+| Activity logs and backups                    | Pending                            |
+| Production deployment and final verification | Pending                            |
 
-*Status describes the reported implementation stage; individual routes, content, assets, and interactions must still be tested before release.*
+_Status describes the reported implementation stage; individual routes, content, assets, and interactions must still be tested before release._
 
 ## 8. Requirements Remaining for the Final System
 
@@ -300,5 +300,4 @@ The next stages are to:
 The current MESAC website development establishes the public-facing frontend and its principal sections, including the academic archive interface and alumni registration prototype.
 
 The work prepares the website for the next stage of development while retaining the existing frontend architecture. Backend integration, persistent data management, and production readiness remain separate tasks required to satisfy the complete requirements document.
-#   m e s a c 1 . 0  
- 
+

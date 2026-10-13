@@ -3,14 +3,13 @@ import { useEffect, useRef } from "react";
 import gsap from "gsap";
 import { Layout } from "@/components/Layout";
 import { Reveal } from "@/components/Reveal";
-import { Counter } from "@/components/Counter";
 import { NotificationBanner } from "@/components/NotificationBanner";
 import { PageGearBackground } from "@/components/PageGearBackground";
 import { EventCard } from "@/components/EventCard";
 import { EmptyState } from "@/components/EmptyState";
 import { mockEvents } from "@/data/mock/events";
 import { mockFacultyAdvisors, mockCoreOfficers2026, DEFAULT_FACULTY_IMG } from "@/data/mock/team";
-import { mockHomeStats, mockSiteSettings } from "@/data/mock/site";
+import { mockSiteSettings } from "@/data/mock/site";
 import {
   FileText,
   Download,
@@ -213,49 +212,7 @@ function Index() {
       {/* 2. REUSABLE ANNOUNCEMENT BANNER */}
       <NotificationBanner config={mockSiteSettings.announcement} />
 
-      {/* 3. HIGHLIGHTED STATISTICS */}
-      <section className="relative py-12 sm:py-16 bg-background border-b border-border/80">
-        <div className="mx-auto max-w-7xl px-4 sm:px-6">
-          <Reveal>
-            <div className="text-center max-w-2xl mx-auto mb-10">
-              <div className="inline-flex items-center gap-2 rounded-full border border-gold/30 bg-gold/10 px-3.5 py-1 text-xs font-bold uppercase tracking-wider text-gold mb-3">
-                <Sparkles className="h-3.5 w-3.5" />
-                <span>Association Overview</span>
-              </div>
-              <h2 className="font-display text-2xl sm:text-3xl md:text-4xl font-extrabold text-foreground tracking-tight">
-                Engineering Impact in Numbers
-              </h2>
-              <p className="mt-2 text-xs sm:text-sm text-muted-foreground leading-relaxed">
-                Empowering mechanical engineering students through verified academic, technical, and
-                industrial initiatives.
-              </p>
-            </div>
-
-            <div className="grid grid-cols-2 md:grid-cols-4 gap-4 sm:gap-6">
-              {mockHomeStats.map((stat) => (
-                <div
-                  key={stat.label}
-                  className="rounded-2xl border border-border/80 bg-card p-5 sm:p-6 text-center shadow-sm card-lift flex flex-col items-center justify-center"
-                >
-                  <div className="font-display text-3xl sm:text-4xl md:text-5xl font-black text-gold tracking-tight flex items-center justify-center">
-                    <Counter to={stat.value} suffix={stat.suffix || ""} />
-                  </div>
-                  <div className="font-display text-xs sm:text-sm font-bold text-foreground mt-2">
-                    {stat.label}
-                  </div>
-                  {stat.description && (
-                    <div className="text-[11px] sm:text-xs text-muted-foreground mt-1 line-clamp-2">
-                      {stat.description}
-                    </div>
-                  )}
-                </div>
-              ))}
-            </div>
-          </Reveal>
-        </div>
-      </section>
-
-      {/* 4. ABOUT MESAC PREVIEW */}
+      {/* 3. ABOUT MESAC PREVIEW */}
       <section className="relative py-16 sm:py-20 bg-background border-b border-border/80">
         <div className="mx-auto max-w-5xl px-4 sm:px-6">
           <Reveal>

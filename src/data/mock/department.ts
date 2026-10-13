@@ -291,3 +291,7 @@ export const mockDepartmentLabs: Lab[] = [
       "Laboratory for sensors, instrumentation, pneumatic and hydraulic circuits, and microcontroller-based automation.",
   },
 ];
+
+export const mockFacultyList = mockDepartmentFaculty;
+export const mockPrograms = mockDepartmentPrograms;
+export const mockLabs = mockDepartmentLabs;

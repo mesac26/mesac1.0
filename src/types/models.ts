@@ -405,7 +405,7 @@ export type AlumniDepartment = "Mechanical Engineering" | "Other";
 export interface AlumniRegistrationFormValues {
   fullName: string;
   graduationYear: string;
-  department: AlumniDepartment | "";
+  department?: AlumniDepartment | "";
   email: string;
   phone: string;
   organization?: string;

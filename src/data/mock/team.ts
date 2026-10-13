@@ -326,3 +326,6 @@ export function getPastCommittees(): AcademicYear[] {
 export function getAvailableAcademicYears(): string[] {
   return mockAllCommittees.map((c) => c.year);
 }
+
+export const mockTeamMembers = mockCoreOfficers2026;
+export const mockAcademicYears = mockAllCommittees;

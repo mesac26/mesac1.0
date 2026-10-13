@@ -3,17 +3,8 @@ import { createFileRoute } from "@tanstack/react-router";
 import { Layout } from "@/components/Layout";
 import { PageHero } from "@/components/PageHero";
 import { Reveal } from "@/components/Reveal";
-import {
-  ALUMNI_GRADUATION_YEARS,
-  ALUMNI_DEPARTMENTS,
-  generateAlumniHandle,
-} from "@/data/mock/alumni";
-import type {
-  AlumniRegistrationFormValues,
-  AlumniRegistrationErrors,
-  AlumniDepartment,
-  AlumniRecord,
-} from "@/types";
+import { ALUMNI_GRADUATION_YEARS, generateAlumniHandle } from "@/data/mock/alumni";
+import type { AlumniRegistrationFormValues, AlumniRegistrationErrors, AlumniRecord } from "@/types";
 import {
   GraduationCap,
   CheckCircle2,
@@ -23,7 +14,6 @@ import {
   User,
   Mail,
   Phone,
-  Building,
   MapPin,
   Calendar,
   RotateCcw,
@@ -56,7 +46,6 @@ export const Route = createFileRoute("/alumni")({
 const INITIAL_FORM_VALUES: AlumniRegistrationFormValues = {
   fullName: "",
   graduationYear: "",
-  department: "",
   email: "",
   phone: "",
   organization: "",
@@ -96,12 +85,7 @@ function AlumniPage() {
       errors.graduationYear = "Graduation year is required.";
     }
 
-    // 3. Department (required)
-    if (!formData.department) {
-      errors.department = "Please select your department.";
-    }
-
-    // 4. Email (required, valid email pattern)
+    // 3. Email (required, valid email pattern)
     const trimmedEmail = formData.email.trim();
     const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
     if (!trimmedEmail) {
@@ -264,13 +248,6 @@ function AlumniPage() {
                       <dt className="text-muted-foreground text-[11px]">Graduation Year</dt>
                       <dd className="font-semibold text-foreground mt-0.5">
                         Batch of {registeredRecord.graduationYear}
-                      </dd>
-                    </div>
-
-                    <div>
-                      <dt className="text-muted-foreground text-[11px]">Department</dt>
-                      <dd className="font-semibold text-foreground mt-0.5">
-                        {registeredRecord.department}
                       </dd>
                     </div>
 
@@ -446,58 +423,9 @@ function AlumniPage() {
                       </div>
                     </div>
 
-                    {/* ROW 2: DEPARTMENT & EMAIL */}
+                    {/* ROW 2: EMAIL & PHONE NUMBER */}
                     <div className="grid grid-cols-1 sm:grid-cols-2 gap-5">
-                      {/* 3. Department */}
-                      <div>
-                        <label
-                          htmlFor="alumni-department"
-                          className="block text-xs font-mono uppercase tracking-wider text-muted-foreground font-semibold mb-1.5"
-                        >
-                          Department <span className="text-amber-500">*</span>
-                        </label>
-                        <div className="relative">
-                          <select
-                            id="alumni-department"
-                            required
-                            value={formData.department}
-                            onChange={(e) =>
-                              handleInputChange("department", e.target.value as AlumniDepartment)
-                            }
-                            aria-required="true"
-                            aria-invalid={Boolean(formErrors.department)}
-                            aria-describedby={formErrors.department ? "err-department" : undefined}
-                            className={`w-full rounded-xl border bg-background px-3.5 py-2.5 text-xs sm:text-sm text-foreground outline-none transition min-h-[44px] focus-visible:ring-2 focus-visible:ring-gold appearance-none cursor-pointer ${
-                              formErrors.department
-                                ? "border-red-500/80 bg-red-500/5"
-                                : "border-border hover:border-border/80 focus:border-gold"
-                            }`}
-                          >
-                            <option value="" disabled className="bg-card text-muted-foreground">
-                              Select Department
-                            </option>
-                            {ALUMNI_DEPARTMENTS.map((dept) => (
-                              <option key={dept} value={dept} className="bg-card text-foreground">
-                                {dept}
-                              </option>
-                            ))}
-                          </select>
-                          <div className="pointer-events-none absolute inset-y-0 right-0 flex items-center px-3 text-muted-foreground">
-                            <Building className="h-4 w-4" />
-                          </div>
-                        </div>
-                        {formErrors.department && (
-                          <p
-                            id="err-department"
-                            className="mt-1.5 text-xs text-red-400 flex items-center gap-1 font-medium"
-                          >
-                            <AlertCircle className="h-3.5 w-3.5 shrink-0" />
-                            <span>{formErrors.department}</span>
-                          </p>
-                        )}
-                      </div>
-
-                      {/* 4. Email */}
+                      {/* 3. Email */}
                       <div>
                         <label
                           htmlFor="alumni-email"
@@ -533,11 +461,8 @@ function AlumniPage() {
                           </p>
                         )}
                       </div>
-                    </div>
 
-                    {/* ROW 3: PHONE NUMBER & CURRENT ORGANIZATION */}
-                    <div className="grid grid-cols-1 sm:grid-cols-2 gap-5">
-                      {/* 5. Phone Number */}
+                      {/* 4. Phone Number */}
                       <div>
                         <label
                           htmlFor="alumni-phone"
@@ -573,8 +498,11 @@ function AlumniPage() {
                           </p>
                         )}
                       </div>
+                    </div>
 
-                      {/* 6. Current Organization / Company (optional) */}
+                    {/* ROW 3: CURRENT ORGANIZATION & CURRENT LOCATION */}
+                    <div className="grid grid-cols-1 sm:grid-cols-2 gap-5">
+                      {/* 5. Current Organization / Company (optional) */}
                       <div>
                         <label
                           htmlFor="alumni-organization"
@@ -596,28 +524,28 @@ function AlumniPage() {
                           />
                         </div>
                       </div>
-                    </div>
 
-                    {/* ROW 4: CURRENT LOCATION */}
-                    <div>
-                      <label
-                        htmlFor="alumni-location"
-                        className="block text-xs font-mono uppercase tracking-wider text-muted-foreground font-semibold mb-1.5"
-                      >
-                        Current Location{" "}
-                        <span className="text-muted-foreground/60 text-[10px] font-normal">
-                          (Optional)
-                        </span>
-                      </label>
-                      <div className="relative">
-                        <input
-                          id="alumni-location"
-                          type="text"
-                          value={formData.location}
-                          onChange={(e) => handleInputChange("location", e.target.value)}
-                          placeholder="e.g. Kochi, India or Munich, Germany"
-                          className="w-full rounded-xl border border-border bg-background px-3.5 py-2.5 text-xs sm:text-sm text-foreground placeholder:text-muted-foreground/50 outline-none hover:border-border/80 focus:border-gold focus-visible:ring-2 focus-visible:ring-gold transition min-h-[44px]"
-                        />
+                      {/* 6. Current Location (optional) */}
+                      <div>
+                        <label
+                          htmlFor="alumni-location"
+                          className="block text-xs font-mono uppercase tracking-wider text-muted-foreground font-semibold mb-1.5"
+                        >
+                          Current Location{" "}
+                          <span className="text-muted-foreground/60 text-[10px] font-normal">
+                            (Optional)
+                          </span>
+                        </label>
+                        <div className="relative">
+                          <input
+                            id="alumni-location"
+                            type="text"
+                            value={formData.location}
+                            onChange={(e) => handleInputChange("location", e.target.value)}
+                            placeholder="e.g. Kochi, India or Munich, Germany"
+                            className="w-full rounded-xl border border-border bg-background px-3.5 py-2.5 text-xs sm:text-sm text-foreground placeholder:text-muted-foreground/50 outline-none hover:border-border/80 focus:border-gold focus-visible:ring-2 focus-visible:ring-gold transition min-h-[44px]"
+                          />
+                        </div>
                       </div>
                     </div>
 

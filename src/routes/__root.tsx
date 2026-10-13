@@ -12,6 +12,7 @@ import { useEffect, type ReactNode } from "react";
 
 import appCss from "../styles.css?url";
 import { AppLoaderProvider } from "../context/AppLoaderContext";
+import { AdminAuthProvider } from "../context/AdminAuthContext";
 
 function NotFoundComponent() {
   return (
@@ -160,10 +161,12 @@ function RootComponent() {
   return (
     <QueryClientProvider client={queryClient}>
       <AppLoaderProvider>
-        {/* Subtle CSS fade-in transition applied on route change */}
-        <PageTransitionWrapper>
-          <Outlet />
-        </PageTransitionWrapper>
+        <AdminAuthProvider>
+          {/* Subtle CSS fade-in transition applied on route change */}
+          <PageTransitionWrapper>
+            <Outlet />
+          </PageTransitionWrapper>
+        </AdminAuthProvider>
       </AppLoaderProvider>
     </QueryClientProvider>
   );
