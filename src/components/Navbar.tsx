@@ -7,6 +7,7 @@ const links = [
   { to: "/", label: "HOME" },
   { to: "/events", label: "EVENTS" },
   { to: "/academy", label: "ACADEMY" },
+  { to: "/archive", label: "ARCHIVE" },
   { to: "/mechanical-dept", label: "MECHANICAL DEPT." },
   { to: "/placements", label: "PLACEMENTS" },
   { to: "/achievements", label: "ACHIEVEMENTS" },
@@ -74,7 +75,8 @@ export function Navbar() {
             {links.map((l) => {
               const active =
                 pathname === l.to ||
-                (l.to === "/about-mesac" && pathname.startsWith("/about-mesac"));
+                (l.to === "/about-mesac" && pathname.startsWith("/about-mesac")) ||
+                (l.to === "/archive" && pathname.startsWith("/archive"));
 
               // Special dropdown for ABOUT MESAC containing Team
               if (l.to === "/about-mesac") {
@@ -181,26 +183,33 @@ export function Navbar() {
         <div
           className={
             "xl:hidden overflow-hidden transition-[max-height,opacity] duration-300 " +
-            (open ? "max-h-[620px] opacity-100 mt-2" : "max-h-0 opacity-0 pointer-events-none")
+            (open ? "max-h-[720px] opacity-100 mt-2" : "max-h-0 opacity-0 pointer-events-none")
           }
         >
           <div className="rounded-3xl border border-border bg-card/95 dark:bg-black/95 p-4 shadow-xl backdrop-blur-xl">
             <div className="grid gap-1">
-              {links.map((l) => (
-                <Link
-                  key={l.to}
-                  to={l.to}
-                  onClick={() => setOpen(false)}
-                  className={
-                    "rounded-2xl px-4 py-3 min-h-[44px] flex items-center text-sm font-semibold tracking-wide uppercase transition-colors duration-150 " +
-                    (pathname === l.to
-                      ? "bg-secondary text-foreground"
-                      : "text-muted-foreground hover:bg-secondary/60 hover:text-foreground")
-                  }
-                >
-                  {l.label}
-                </Link>
-              ))}
+              {links.map((l) => {
+                const active =
+                  pathname === l.to ||
+                  (l.to === "/about-mesac" && pathname.startsWith("/about-mesac")) ||
+                  (l.to === "/archive" && pathname.startsWith("/archive"));
+
+                return (
+                  <Link
+                    key={l.to}
+                    to={l.to}
+                    onClick={() => setOpen(false)}
+                    className={
+                      "rounded-2xl px-4 py-3 min-h-[44px] flex items-center text-sm font-semibold tracking-wide uppercase transition-colors duration-150 " +
+                      (active
+                        ? "bg-secondary text-foreground font-bold"
+                        : "text-muted-foreground hover:bg-secondary/60 hover:text-foreground")
+                    }
+                  >
+                    {l.label}
+                  </Link>
+                );
+              })}
               {/* Nested Team link under About MESAC for mobile */}
               <Link
                 to="/about-mesac/team"

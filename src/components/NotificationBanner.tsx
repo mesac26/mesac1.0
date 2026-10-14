@@ -15,7 +15,7 @@ export interface AnnouncementConfig {
 }
 
 // Configuration for active announcement banner. Set `active: true` when a new notification/registration is live.
-export const CURRENT_ANNOUNCEMENT: AnnouncementConfig = {
+const CURRENT_ANNOUNCEMENT: AnnouncementConfig = {
   active: true,
   badge: "Announcement",
   title: "MESAC Committee 2026-27 Announced",

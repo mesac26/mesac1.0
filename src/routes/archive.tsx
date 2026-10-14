@@ -5,10 +5,8 @@ import { PageHero } from "@/components/PageHero";
 import { Reveal } from "@/components/Reveal";
 import { EmptyState } from "@/components/EmptyState";
 import { StickyFilterBar } from "@/components/StickyFilterBar";
-import {
-  ArchiveDocumentCard,
-  DOCUMENT_TYPE_LABELS,
-} from "@/components/archive/ArchiveDocumentCard";
+import { ArchiveDocumentCard } from "@/components/archive/ArchiveDocumentCard";
+import { DOCUMENT_TYPE_LABELS } from "@/lib/archive";
 import { mockArchiveDocuments } from "@/data/mock/archive";
 import type { ArchiveDocument, ArchiveDocumentType } from "@/types";
 import {

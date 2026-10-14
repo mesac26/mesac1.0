@@ -274,7 +274,7 @@ function DeptPage() {
                       <BookOpen className="h-3.5 w-3.5 text-gold" />
                       <span>{p.degree} Curriculum</span>
                     </span>
-                    <Link to="/downloads" className="text-gold font-medium hover:underline">
+                    <Link to="/archive" className="text-gold font-medium hover:underline">
                       View Syllabus Papers →
                     </Link>
                   </div>

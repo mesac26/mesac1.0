@@ -187,11 +187,11 @@ function Index() {
 
             <div className="mt-8 flex flex-col sm:flex-row items-center justify-center gap-3 sm:gap-4 w-full sm:w-auto px-4 sm:px-0">
               <Link
-                to="/downloads"
+                to="/archive"
                 className="hero-cta group inline-flex items-center justify-center gap-2 rounded-xl gradient-gold text-primary px-6 py-3.5 text-xs sm:text-sm font-bold shadow-glass hover:brightness-105 active:scale-95 transition-all w-full sm:w-auto min-h-[44px]"
               >
                 <FileText className="h-4 w-4" />
-                <span>Download Syllabus & Rulebooks</span>
+                <span>Explore Academic Archive</span>
                 <span className="transition-transform group-hover:translate-x-1">→</span>
               </Link>
               <Link
@@ -318,7 +318,7 @@ function Index() {
                 <div>
                   <div className="inline-flex items-center gap-2 rounded-full bg-gold/15 px-3.5 py-1 text-xs font-bold text-gold uppercase tracking-wider mb-3">
                     <Sparkles className="h-3.5 w-3.5" />
-                    <span>Resource & PDF Download Hub</span>
+                    <span>Academic Resource Archive</span>
                   </div>
                   <h2 className="font-display text-2xl sm:text-3xl md:text-5xl leading-tight text-foreground">
                     All CUSAT Mechanical PDFs <br />
@@ -331,11 +331,11 @@ function Index() {
                 </div>
 
                 <Link
-                  to="/downloads"
+                  to="/archive"
                   className="inline-flex items-center justify-center gap-2.5 rounded-xl gradient-gold text-primary font-bold px-6 sm:px-8 py-3.5 text-xs sm:text-sm shadow-glass hover:brightness-105 active:scale-95 transition-all shrink-0 min-h-[44px]"
                 >
                   <Download className="h-4 w-4" />
-                  <span>Open PDF Downloads Center</span>
+                  <span>Open Academic Archive</span>
                   <ArrowRight className="h-4 w-4" />
                 </Link>
               </div>
@@ -440,10 +440,10 @@ function Index() {
                 </p>
                 <div className="mt-8 flex flex-col sm:flex-row gap-3 w-full sm:w-auto">
                   <Link
-                    to="/downloads"
+                    to="/archive"
                     className="rounded-xl gradient-gold text-primary font-bold px-6 py-3.5 text-xs sm:text-sm shadow-sm hover:brightness-105 active:scale-95 transition-all text-center min-h-[44px] flex items-center justify-center"
                   >
-                    Download Academic PDFs
+                    Explore Academic Archive
                   </Link>
                   <Link
                     to="/contact"

@@ -1,13 +1,10 @@
-import { createFileRoute, Link } from "@tanstack/react-router";
+import { createFileRoute, Link, useRouter } from "@tanstack/react-router";
 import { useState, useMemo } from "react";
 import { Layout } from "@/components/Layout";
 import { EmptyState } from "@/components/EmptyState";
 import { DocumentPreviewViewer } from "@/components/archive/DocumentPreviewViewer";
 import { ReportProblemModal } from "@/components/archive/ReportProblemModal";
-import {
-  DOCUMENT_TYPE_LABELS,
-  DOCUMENT_TYPE_STYLES,
-} from "@/components/archive/ArchiveDocumentCard";
+import { DOCUMENT_TYPE_LABELS, DOCUMENT_TYPE_STYLES } from "@/lib/archive";
 import { mockArchiveDocuments } from "@/data/mock/archive";
 import type { ArchiveDocument, ArchiveDocumentType } from "@/types";
 import {
@@ -56,6 +53,7 @@ export const Route = createFileRoute("/archive_/$documentId")({
 
 function DocumentDetailPage() {
   const { documentId } = Route.useParams();
+  const router = useRouter();
   const [isReportModalOpen, setIsReportModalOpen] = useState(false);
 
   const documentItem = useMemo(() => {
@@ -71,9 +69,7 @@ function DocumentDetailPage() {
             description={`The requested document reference "${documentId}" does not exist in the active academic index.`}
             actionText="Return to Academic Archive"
             onAction={() => {
-              if (typeof window !== "undefined") {
-                window.location.href = "/archive";
-              }
+              router.navigate({ to: "/archive" });
             }}
           />
         </div>

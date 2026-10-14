@@ -1,5 +1,3 @@
-import { useAppLoader } from "../context/AppLoaderContext";
-
 /**
  * PageLoader:
  * Backward-compatible helper component if referenced elsewhere.
@@ -9,5 +7,3 @@ export function PageLoader() {
   // Managed centrally by AppLoaderProvider
   return null;
 }
-
-export { useAppLoader };
