@@ -1,0 +1,323 @@
+/**
+ * Mock data for MESAC Admin Dashboard development and integration testing.
+ *
+ * NOTE: These are local development fixtures for frontend UI development.
+ * Real production data will be supplied by the backend API.
+ */
+
+import type {
+  AdminUser,
+  ActivityLogEntry,
+  BackupRecord,
+  ArchiveProblemReport,
+  ArchiveHealthIssue,
+} from "@/types/admin";
+import type { ContactSubmission, EnrollmentSubmission } from "@/types/models";
+
+export const mockAdminUsers: AdminUser[] = [
+  {
+    id: "admin-1",
+    name: "Dr. Jacob Elias",
+    email: "jacob.elias@cusat.ac.in",
+    role: "superadmin",
+    createdAt: "2024-01-15T09:00:00Z",
+    lastLoginAt: "2026-10-12T18:30:00Z",
+    isActive: true,
+  },
+  {
+    id: "admin-2",
+    name: "Dr. Biju N.",
+    email: "bijun@cusat.ac.in",
+    role: "superadmin",
+    createdAt: "2024-02-01T10:00:00Z",
+    lastLoginAt: "2026-10-10T14:15:00Z",
+    isActive: true,
+  },
+  {
+    id: "admin-3",
+    name: "Kalidasan V. R.",
+    email: "kalidasan.mesac@cusat.ac.in",
+    role: "editor",
+    createdAt: "2025-06-10T11:00:00Z",
+    lastLoginAt: "2026-10-13T04:20:00Z",
+    isActive: true,
+  },
+  {
+    id: "admin-4",
+    name: "Abhinav S.",
+    email: "abhinav.mesac@cusat.ac.in",
+    role: "editor",
+    createdAt: "2025-06-12T11:00:00Z",
+    lastLoginAt: "2026-10-12T20:10:00Z",
+    isActive: true,
+  },
+];
+
+export const mockActivityLogs: ActivityLogEntry[] = [
+  {
+    id: "act-1",
+    actor: {
+      id: "admin-3",
+      name: "Kalidasan V. R.",
+      email: "kalidasan.mesac@cusat.ac.in",
+      role: "editor",
+    },
+    action: "create",
+    entityType: "archive_document",
+    entityId: "doc-qp-fluid-2024",
+    entityTitle: "Fluid Machinery — S5 Nov 2024 QP",
+    summary: "Uploaded semester 5 question paper with Google Drive PDF indexing.",
+    timestamp: "2026-10-12T21:40:00Z",
+  },
+  {
+    id: "act-2",
+    actor: {
+      id: "admin-4",
+      name: "Abhinav S.",
+      email: "abhinav.mesac@cusat.ac.in",
+      role: "update",
+    },
+    action: "update",
+    entityType: "event",
+    entityId: "event-daikin-2025",
+    entityTitle: "Daikin HVAC Industrial Masterclass",
+    summary: "Updated event registration link and agenda timeline.",
+    timestamp: "2026-10-12T19:15:00Z",
+  },
+  {
+    id: "act-3",
+    actor: {
+      id: "admin-1",
+      name: "Dr. Jacob Elias",
+      email: "jacob.elias@cusat.ac.in",
+      role: "superadmin",
+    },
+    action: "status_change",
+    entityType: "inbox_item",
+    entityId: "rep-102",
+    entityTitle: "Report: Blurry page in Heat Transfer S6 QP",
+    summary: "Marked archive report as resolved after file replacement.",
+    timestamp: "2026-10-12T15:02:00Z",
+  },
+  {
+    id: "act-4",
+    actor: {
+      id: "admin-3",
+      name: "Kalidasan V. R.",
+      email: "kalidasan.mesac@cusat.ac.in",
+      role: "editor",
+    },
+    action: "create",
+    entityType: "gallery_album",
+    entityId: "alb-tw-2025",
+    entityTitle: "Thermal & Fluids Hands-On Workshop Album",
+    summary: "Created photo album linked to Thermal Workshop event.",
+    timestamp: "2026-10-11T11:24:00Z",
+  },
+  {
+    id: "act-5",
+    actor: {
+      id: "admin-1",
+      name: "Dr. Jacob Elias",
+      email: "jacob.elias@cusat.ac.in",
+      role: "superadmin",
+    },
+    action: "export",
+    entityType: "system_backup",
+    entityId: "bkp-2026-10-10",
+    entityTitle: "Full Metadata & Content JSON Export",
+    summary: "Generated scheduled database snapshot and verified integrity.",
+    timestamp: "2026-10-10T02:00:00Z",
+  },
+];
+
+export const mockArchiveReports: ArchiveProblemReport[] = [
+  {
+    id: "rep-101",
+    documentId: "doc-1",
+    documentTitle: "Mechanics of Solids — Regular Exam (Nov 2023)",
+    subjectCode: "19-204-0303",
+    semester: 3,
+    issueType: "missing_pages",
+    description: "Question 4(b) on page 3 is cut off at the bottom margin.",
+    reportedBy: "Rahul Menon",
+    reporterEmail: "rahul.m@example.com",
+    createdAt: "2026-10-11T14:20:00Z",
+    status: "pending",
+  },
+  {
+    id: "rep-102",
+    documentId: "doc-4",
+    documentTitle: "Heat & Mass Transfer — Special Supplementary (May 2023)",
+    subjectCode: "19-204-0601",
+    semester: 6,
+    issueType: "broken_download",
+    description: "Google Drive direct download gave permission error 403.",
+    reportedBy: "Devika S.",
+    reporterEmail: "devika.s@example.com",
+    createdAt: "2026-10-10T08:45:00Z",
+    status: "resolved",
+    resolutionNotes: "Public viewer permission updated on primary Drive share link.",
+  },
+  {
+    id: "rep-103",
+    documentId: "doc-8",
+    documentTitle: "Automobile Engineering — S8 Elective (April 2024)",
+    subjectCode: "19-204-0803",
+    semester: 8,
+    issueType: "wrong_subject",
+    description: "This PDF contains internal combustion engines syllabus instead of QP.",
+    reportedBy: "Ananthu K.",
+    reporterEmail: "ananthu.k@example.com",
+    createdAt: "2026-10-09T18:10:00Z",
+    status: "investigating",
+  },
+];
+
+export const mockContactSubmissions: ContactSubmission[] = [
+  {
+    id: "sub-1",
+    name: "Apex Auto Dynamics Ltd.",
+    email: "recruitment@apexautodynamics.in",
+    phone: "+91 98471 22334",
+    subject: "Campus Recruitment for Core Design Engineers (2026 Batch)",
+    category: "Sponsorship",
+    message:
+      "We are interested in scheduling an on-campus placement and interaction talk for final year mechanical engineering students specializing in CAD/FEA.",
+    createdAt: "2026-10-12T16:00:00Z",
+    status: "new",
+  },
+  {
+    id: "sub-2",
+    name: "Naveen Prakash (Alumnus 2018)",
+    email: "naveen.prakash@energytech.de",
+    phone: "+49 152 9876543",
+    subject: "Guest Lecture Proposal: CFD in Renewable Energy Systems",
+    category: "Alumni Network",
+    message:
+      "I am currently a senior simulation engineer in Munich and would be glad to host a virtual technical session for MESAC students next month.",
+    createdAt: "2026-10-11T09:30:00Z",
+    status: "read",
+  },
+  {
+    id: "sub-3",
+    name: "Sandeep Kumar",
+    email: "sandeep.k@cusat.ac.in",
+    phone: "+91 82810 55443",
+    subject: "Inquiry regarding Formula Student Tarusa Team Recruitment",
+    category: "General Inquiry",
+    message:
+      "Could you please share the orientation schedule for 2nd year students joining Team Tarusa SAE?",
+    createdAt: "2026-10-08T12:00:00Z",
+    status: "responded",
+    notes: "Replied with orientation date (Oct 24) and workshop link.",
+  },
+];
+
+export const mockEnrollmentSubmissions: EnrollmentSubmission[] = [
+  {
+    id: "enr-1",
+    studentName: "Aditya Mohan",
+    registrationNumber: "22014022",
+    email: "aditya.22014022@cusat.ac.in",
+    phone: "+91 94471 11223",
+    branch: "Mechanical Engineering",
+    semester: 5,
+    trackId: "track-fea",
+    createdAt: "2026-10-12T17:40:00Z",
+    status: "pending",
+  },
+  {
+    id: "enr-2",
+    studentName: "Meera Krishnan",
+    registrationNumber: "23014056",
+    email: "meera.23014056@cusat.ac.in",
+    phone: "+91 97455 33441",
+    branch: "Mechanical Engineering",
+    semester: 3,
+    trackId: "track-cad",
+    createdAt: "2026-10-11T13:20:00Z",
+    status: "approved",
+  },
+  {
+    id: "enr-3",
+    studentName: "Fahad Rahim",
+    registrationNumber: "22014089",
+    email: "fahad.22014089@cusat.ac.in",
+    phone: "+91 99951 88772",
+    branch: "Civil Engineering",
+    semester: 5,
+    trackId: "track-robotics",
+    createdAt: "2026-10-10T10:15:00Z",
+    status: "pending",
+  },
+];
+
+export const mockBackups: BackupRecord[] = [
+  {
+    id: "bkp-001",
+    name: "mesac_db_snapshot_2026_10_12.json",
+    type: "full_database",
+    sizeBytes: 4892140,
+    status: "completed",
+    createdAt: "2026-10-12T02:00:00Z",
+    verifiedAt: "2026-10-12T02:01:15Z",
+    checksum: "sha256:7f4a28bc89ef2391...",
+    downloadUrl: "#",
+    isAutomatic: true,
+  },
+  {
+    id: "bkp-002",
+    name: "academic_archive_index_export_2026_10_11.json",
+    type: "archive_metadata",
+    sizeBytes: 1245000,
+    status: "completed",
+    createdAt: "2026-10-11T18:30:00Z",
+    verifiedAt: "2026-10-11T18:30:45Z",
+    checksum: "sha256:1a82ee33190ab78f...",
+    downloadUrl: "#",
+    isAutomatic: false,
+  },
+  {
+    id: "bkp-003",
+    name: "media_manifest_2026_10_05.json",
+    type: "gallery_manifest",
+    sizeBytes: 852000,
+    status: "completed",
+    createdAt: "2026-10-05T02:00:00Z",
+    verifiedAt: "2026-10-05T02:00:30Z",
+    checksum: "sha256:99cde32145ba8901...",
+    downloadUrl: "#",
+    isAutomatic: true,
+  },
+];
+
+export const mockArchiveHealthIssues: ArchiveHealthIssue[] = [
+  {
+    documentId: "doc-14",
+    documentTitle: "Dynamics of Machines — S6 Regular QP",
+    subject: "Dynamics of Machines",
+    severity: "warning",
+    issueCode: "permission_denied",
+    message: "Google Drive link permissions might require authentication instead of public read.",
+    lastChecked: "2026-10-12T20:00:00Z",
+  },
+  {
+    documentId: "doc-22",
+    documentTitle: "Thermal Engineering Lab Manual — 2019 Scheme",
+    subject: "Thermal Engineering Lab",
+    severity: "error",
+    issueCode: "missing_drive_file",
+    message: "Drive File ID returned 404 (File not found or trashed).",
+    lastChecked: "2026-10-12T20:00:00Z",
+  },
+  {
+    documentId: "doc-31",
+    documentTitle: "Refrigeration & Air Conditioning S7 QP",
+    subject: "RAC",
+    severity: "warning",
+    issueCode: "missing_metadata",
+    message: "Missing subject code or scheme year tag.",
+    lastChecked: "2026-10-12T20:00:00Z",
+  },
+];

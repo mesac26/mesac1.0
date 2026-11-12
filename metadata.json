@@ -1,0 +1,6 @@
+{
+  "name": "MESAC 2026",
+  "description": "Mechanical Engineering Students' Association - MESAC Official Portal",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
